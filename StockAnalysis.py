@@ -1,6 +1,6 @@
 
 
-pip install crewai crewai_tools python-dotenv
+# Prerequisite - pip install crewai crewai_tools python-dotenv
 
 import os
 from datetime import datetime
