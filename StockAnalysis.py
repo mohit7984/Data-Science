@@ -1,14 +1,6 @@
-1. Preparation
-First, install the necessary packages:
+
 
 pip install crewai crewai_tools python-dotenv
-
-And create a file named .env in your working directory with:
-
-OPENAI_API_KEY=your-openai-api-key
-SERPER_API_KEY=your-serper-api-key
-
-2. Full Code
 
 import os
 from datetime import datetime
@@ -192,87 +184,3 @@ def run_single_analysis(stock_symbol, task_type="full"):
         single_crew = Crew(agents=list(agents), tasks=tasks, process=Process.sequential, verbose=2)
     return single_crew.kickoff()
 
-
-
-Key Improvements:
-Beginner-friendly input prompts.
-
-API keys are kept secure via .env.
-
-Error handling for missing keys and execution errors.
-
-Cleaner, clearer report saving (with user control).
-
-Consistent formatting and best practices for clarity and growth.
-
-Ready for plug-and-play with more agents/tools as you learn.
-
-
-
-How to Use
-Save the above script as stock_analysis_crew.py.
-
-Place your .env file with the required API keys.
-
-Run the script:
-python stock_analysis_crew.py
-
-
-Enter the stock symbol and optional save path as prompted.
-
-************************************************************************************************
-🚦 How to Use This Script (Step-by-Step Guide)
-Install the requirements:
-
-bash
-Copy
-Edit
-pip install crewai crewai_tools python-dotenv
-Set up your API keys:
-
-Create a file named .env (just a text file with no name, only .env).
-
-Add your keys like this:
-
-ini
-Copy
-Edit
-OPENAI_API_KEY=your-openai-api-key
-SERPER_API_KEY=your-serper-api-key
-Save the script:
-
-Copy the code above into a file called stock_analysis_crew.py.
-
-Run your program:
-
-bash
-Copy
-Edit
-python stock_analysis_crew.py
-Follow the prompts:
-
-Enter your desired stock symbol (e.g., AAPL, RELIANCE, TSLA).
-
-You’ll see analysis progress on your screen.
-
-The final report will be saved as a .txt file in the same folder (unless you specify a path).
-
-✨ Key Features of This Code
-Fully automated, multi-agent analysis:
-News, fundamental, financial, and synthesis—all handled in a pipeline.
-
-Keeps your API keys secure using .env (no hard-coding in scripts).
-
-Flexible, beginner-friendly, and robust.
-
-Detailed step-by-step output in the console and a full report saved to file.
-
-Easily extendable:
-Add more agents or tasks as you learn!
-
-❓ What Next?
-You can run this for any stock you want!
-
-If you want a Jupyter notebook version (point-and-click) or want real API integration (live stock/financial data), just ask!
-
-If you want to understand any part of the code (how it works, how to add custom agents/tasks, etc.), let me know!
